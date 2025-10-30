@@ -1,0 +1,92 @@
+/* Nitropop — Estilo Tropical */
+:root{
+  --bg1: #fff7ed; /* light warm */
+  --bg2: #ffefd5;
+  --accent:#ff6b35; /* coral/orange */
+  --accent-2:#ffd166; /* warm yellow */
+  --accent-3:#ff5c8a; /* pink */
+  --muted:#2b2b2b;
+  --card:#ffffff;
+  --glass: rgba(255,255,255,0.6);
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background: linear-gradient(180deg,var(--bg1), #fff2e6);
+  color:var(--muted);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+}
+
+/* Layout */
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+.header-inner, .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.site-header{padding:.6rem 0;position:sticky;top:0;background:rgba(255,255,255,0.85);backdrop-filter: blur(6px);z-index:50}
+.logo{height:56px}
+.logo-placeholder{font-weight:900;color:var(--accent);font-size:1.4rem;padding:6px 10px;background:linear-gradient(90deg,var(--accent-2),var(--accent));border-radius:8px}
+.brand{display:flex;align-items:center;gap:0.6rem}
+.brand-text strong{display:block;font-size:1.05rem}
+.brand-text span{display:block;font-size:0.75rem;color:rgba(0,0,0,0.55)}
+
+/* Nav */
+.nav a{color:var(--muted);text-decoration:none;margin-left:1rem;font-weight:700}
+.nav a:hover{color:var(--accent-3)}
+
+/* Hero */
+.hero{padding:2.5rem 0;display:flex;align-items:center}
+.hero-inner{display:flex;gap:2rem;align-items:center}
+.hero-text{flex:1}
+.hero-text h1{font-size:2.6rem;margin:.2rem 0;color:var(--accent)}
+.hero-text p{font-size:1.05rem;color:rgba(0,0,0,0.7);margin-bottom:1rem}
+.hero-ctas .cta{margin-right:0.6rem}
+.cta{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#111;padding:.6rem 1rem;border-radius:999px;font-weight:700;text-decoration:none;box-shadow:0 12px 24px rgba(0,0,0,0.08)}
+.cta.ghost{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+.hero-image img{width:200px;height:auto;}
+
+/* Menu */
+.menu{padding:1.6rem 0}
+.menu-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.menu-card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.05)}
+.menu-card .price{margin-top:0.6rem;font-weight:800;color:var(--accent-3)}
+
+/* Productos / tienda */
+.productos{padding:1.6rem 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 14px 30px rgba(33,33,33,0.06);display:flex;flex-direction:column;gap:0.6rem;align-items:flex-start}
+.prod-img{width:100%;height:120px;object-fit:cover;border-radius:8px;background:linear-gradient(90deg,var(--accent-2),var(--accent));display:block}
+.product-row{display:flex;justify-content:space-between;width:100%;align-items:center;margin-top:auto}
+.btn-buy{background:var(--accent-3);color:white;border:0;padding:.5rem .8rem;border-radius:8px;cursor:pointer}
+
+/* Sobre */
+.sobre{padding:1.6rem 0}
+.beneficios{display:flex;gap:1rem;flex-wrap:wrap;padding:0;list-style:none;margin-top:1rem}
+.beneficios li{background:linear-gradient(90deg,var(--accent-2),var(--accent));padding:.6rem .9rem;border-radius:9px;color:#111;font-weight:700}
+
+/* Contacto */
+.contacto{padding:1.6rem 0}
+form{display:grid;gap:.6rem;max-width:600px}
+label{display:flex;flex-direction:column;font-weight:700;color:var(--muted)}
+input, textarea{padding:.7rem;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:transparent;color:var(--muted);outline:none}
+.form-msg{margin-top:.6rem;color:var(--accent);font-weight:800}
+
+/* Footer */
+.site-footer{padding:1rem 0;border-top:1px solid rgba(0,0,0,0.04);margin-top:2rem}
+.site-footer p{margin:0;color:rgba(0,0,0,0.6)}
+.socials a{margin-left:.6rem;color:var(--muted);text-decoration:none;font-weight:700}
+
+/* Cart table */
+.cart-table{width:100%;border-collapse:collapse}
+.cart-table th, .cart-table td{padding:.6rem;border-bottom:1px solid rgba(0,0,0,0.05)}
+
+/* Post styles */
+.post, .post-full{background:var(--card);padding:1rem;border-radius:10px;box-shadow:0 8px 18px rgba(0,0,0,0.04)}
+
+/* Responsive */
+@media (max-width:800px){
+  .hero-inner{flex-direction:column-reverse;text-align:center}
+  .hero-text h1{font-size:1.8rem}
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .logo{height:48px}
+}

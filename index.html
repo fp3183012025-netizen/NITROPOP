@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nitropop — Bebidas con Nitrógeno (Tropical)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src='A_logo_for_a_nitrogen-infused_beverage_brand_named.png' alt='Nitropop logo' class='logo'/>
+        <div class="brand-text"><strong>Nitropop</strong><span>Bebidas con nitrógeno</span></div>
+      </div>
+      <nav class="nav">
+        <a href="#menu">Menú</a>
+        <a href="#tienda">Tienda</a>
+        <a href="blog.html">Blog</a>
+        <a href="#contacto">Contacto</a>
+        <a href="cart.html" class="cart-link">Carrito (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Sabores tropicales, espuma inolvidable</h1>
+          <p>Explora nuestras bebidas infusionadas con nitrógeno — cremosas, refrescantes y llenas de color.</p>
+          <div class="hero-ctas">
+            <a class="cta" href="#menu">Ver menú</a>
+            <a class="cta ghost" href="#tienda">Ir a tienda</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src='A_logo_for_a_nitrogen-infused_beverage_brand_named.png' alt='Nitropop cup' />
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu container">
+      <h2>Menú destacado</h2>
+      <p class="lead">Tres clásicos tropicales — cada uno con espuma de nitrógeno y personalidad propia.</p>
+      <div class="menu-cards">
+        <article class="menu-card">
+          <h3>Explosión Cítrica</h3>
+          <p>Limón y naranja con un toque de maracuyá. Refrescante y chispeante.</p>
+          <div class="price">S/ 2.50</div>
+        </article>
+        <article class="menu-card">
+          <h3>Fresa Nube</h3>
+          <p>Fresa suave con una espuma aterciopelada que abraza el paladar.</p>
+          <div class="price">S/ 2.80</div>
+        </article>
+        <article class="menu-card">
+          <h3>Mango Nitro</h3>
+          <p>Mango tropical con notas cremosas y una sensación suave y burbujeante.</p>
+          <div class="price">S/ 3.00</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="tienda" class="productos container">
+      <h2>Tienda</h2>
+      <p class="lead">Añade tus sabores favoritos al carrito. (Simulación — no hay pago real).</p>
+      <div class="cards" id="product-list">
+        <!-- Productos generados vía JS -->
+      </div>
+    </section>
+
+    <section id="sobre" class="sobre container">
+      <h2>Sobre Nitropop</h2>
+      <p>En Nitropop mezclamos creatividad y técnica: usamos nitrógeno para crear bebidas con textura sedosa, espuma densa y sabores vibrantes. Perfecto para eventos, cafeterías y para quien busca algo distinto.</p>
+      <ul class="beneficios">
+        <li>Ingredientes naturales</li>
+        <li>Textura cremosa y duradera</li>
+        <li>Diseño y presentación llamativa</li>
+      </ul>
+    </section>
+
+    <section id="contacto" class="contacto container">
+      <h2>Contacto</h2>
+      <p>¿Deseas distribuir Nitropop o traerlo a tu evento? Escríbenos.</p>
+      <form id="contactForm">
+        <label>Nombre
+          <input type="text" name="name" required />
+        </label>
+        <label>Correo electrónico
+          <input type="email" name="email" required />
+        </label>
+        <label>Mensaje
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="cta">Enviar</button>
+      </form>
+      <div id="formMsg" class="form-msg" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Nitropop — Estilo Tropical. Hecho con sabor.</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products.json" type="application/json"></script>
+  <script src="script.js"></script>
+</body>
+</html>
